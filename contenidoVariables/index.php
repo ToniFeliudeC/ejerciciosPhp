@@ -10,12 +10,7 @@
     <?php
 
         function isTrue($thing) {
-            if ($thing == 1) {
-                return "true";
-            }
-            else {
-                return "false";
-            }
+            return ($thing == 1) ? "true" : "false";
         }
 
         $values = array(null, 0, true, false, "0", "", "foo", array(), null);
