@@ -29,17 +29,21 @@
             text-align: center;}</style>";
         echo "<table style=width:100%>";
         echo "<tr>
+        <th>Número de fila</th>
         <th>Contenido de \$var</th>
         <th>isset(\$var)</th>
         <th>empty(\$var)</th>
-        <th>bool(\$var)</th>";
+        <th>bool(\$var)</th>
+        <th>is_null(\$var)</th>";
         echo "</tr>";
         for ($x = 0; $x < count($values); $x++) {
             echo "<tr>";
+            echo "<td>" . $x+1 . "</td>";
             echo "<td>" . $valuesContent[$x] . "</td>";
             echo "<td>" . isTrue(isset($values[$x]))  . "</td>";
             echo "<td>" . isTrue(empty($values[$x])) . "</td>";
-            echo "<td>" . isTrue((bool) $values[$x]) . "</td>"; 
+            echo "<td>" . isTrue((bool) $values[$x]) . "</td>";
+            echo "<td>" . isTrue(is_null($values[$x])) . "</td>";
             echo "</tr>";
         }
         echo "</table>";
