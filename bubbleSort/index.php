@@ -17,7 +17,13 @@
             echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
         }
 
-        $array = [];
+        $array = [43, 12, 54, 32, 65, 1, 99, 33, 24, 30, 16, 1233, 81, 2];
+
+        echo "<p>Array desordenada:</p>";
+        for ($i = 0; $i < count($array); $i++) {
+            echo $array[$i] . " ";
+        }
+        echo "<p>Array ordenada:</p>"; 
 
         function bubbleSort($arr) {
 
